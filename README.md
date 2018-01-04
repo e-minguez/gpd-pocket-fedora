@@ -20,7 +20,7 @@ Copy them from your laptop in from `~/rpmbuild/RPMS/x86_64` to a pendrive and in
 sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
 ```
 
-Then, run the scripts in any order and reboot.
+Then, run all the scripts in any order and reboot.
 
 After the first reboot, ensure you are using your new kernel:
 
@@ -37,6 +37,6 @@ sudo dracut -f /boot/initramfs-$(uname -r).img $(uname -r)
 Reboot again... and profit!!!
 
 ## References
-http://hansdegoede.livejournal.com/17445.html
-https://github.com/stockmind/gpd-pocket-ubuntu-respin
-https://wiki.archlinux.org/index.php/GPD_Pocket
+* http://hansdegoede.livejournal.com/17445.html
+* https://github.com/stockmind/gpd-pocket-ubuntu-respin
+* https://wiki.archlinux.org/index.php/GPD_Pocket
