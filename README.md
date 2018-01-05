@@ -21,11 +21,12 @@ The kernel parameters for the iso need to be edited after the "quiet" parameter 
 fbcon=rotate:1
 ```
 
-* In order to do it, select "Boot this media"
+* In order to do it, select "Start Fedora-Workstation-Live 27"
 * Press "e" to edit the boot options
 * Scroll down to the kernel line
-* Add the fbcon parameter
+* Add the fbcon parameter after the "quiet" parameter
 * Once finished, press "Ctrl+x" to boot the installation
+* Install Fedora 27 as you wish
 
 ## Post installation tasks
 
