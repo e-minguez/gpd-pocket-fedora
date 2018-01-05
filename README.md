@@ -26,6 +26,9 @@ fbcon=rotate:1
 * Scroll down to the kernel line
 * Add the fbcon parameter after the "quiet" parameter
 * Once finished, press "Ctrl+x" to boot the installation
+* To rotate the screen in the live system, press the Windows button, type "displays" and press enter. This will open the displays settings.
+* Modify the orientation to be "Portrait left" and apply the configuration
+NOTE: If the "apply" button doesn't appear, change the resolution as well and then it will appear. Then select the proper resolution again.
 * Install Fedora 27 as you wish
 
 ## Post installation tasks
