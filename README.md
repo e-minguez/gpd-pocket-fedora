@@ -40,6 +40,7 @@ sudo dnf groupinstall -y "C Development Tools and Libraries"
 sudo dnf install -y zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel openssl-devel elfutils-libelf-devel
 
 mkdir ~/git/
+cd git
 git clone https://github.com/jwrdegoede/linux-sunxi.git gpd-pocket-kernel
 cd gpd-pocket-kernel
 make clean
