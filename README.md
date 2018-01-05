@@ -59,18 +59,24 @@ git clone https://github.com/e-minguez/gpd-pocket-fedora.git /run/media/$USER/<p
 * Copy the kernel packages from your laptop from `~/rpmbuild/RPMS/x86_64` to the pendrive.
 
 
-* Connect the pendrive in the GPD pocket once Fedora 27 has been installed and booted and install the kernel using dnf:
-
-```
-sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
-```
+* Connect the pendrive in the GPD pocket once Fedora 27 has been installed and booted
 
 * Run the `fix_wifi.sh` script to enable wifi connectivity.
+
+```
+/run/media/$USER/<pendrive>/fix_wifi.sh
+```
 
 * Connect to your wifi network using the `basic_network.sh` script as:
 
 ```
 /run/media/$USER/<pendrive>/basic_network.sh <my_ap> <my_password>
+```
+
+* Install the kernel using dnf:
+
+```
+sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
 ```
 
 Then, run all the scripts in any order and reboot.
