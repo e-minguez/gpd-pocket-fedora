@@ -93,6 +93,10 @@ cd /run/media/$USER/<pendrive>/
 sudo reboot
 ```
 
+**NOTE:** The rescue kernel is removed in the fix_kernel script and
+prevent to be built again in the dracut script. Review it if you want
+to have a rescue kernel!!!
+
 After the first reboot, ensure you are using your new kernel:
 
 ```
