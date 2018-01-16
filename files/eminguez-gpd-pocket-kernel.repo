@@ -1,0 +1,10 @@
+[eminguez_gpd-pocket-kernel]
+name=eminguez_gpd-pocket-kernel
+baseurl=https://packagecloud.io/eminguez/gpd-pocket-kernel/fedora/27/$basearch
+repo_gpgcheck=1
+gpgcheck=0
+enabled=1
+gpgkey=https://packagecloud.io/eminguez/gpd-pocket-kernel/gpgkey
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+metadata_expire=300

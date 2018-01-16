@@ -33,31 +33,12 @@ NOTE: If the "apply" button doesn't appear, change the resolution as well and th
 
 ## Post installation tasks
 
-* Compile the kernel in your F27 laptop using the following instructions:
-
-```
-sudo dnf groupinstall -y "C Development Tools and Libraries"
-sudo dnf install -y zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel openssl-devel elfutils-libelf-devel
-
-mkdir ~/git/
-cd git
-git clone https://github.com/jwrdegoede/linux-sunxi.git gpd-pocket-kernel
-cd gpd-pocket-kernel
-make clean
-make -j $(getconf _NPROCESSORS_ONLN) binrpm-pkg LOCALVERSION=-gpd-custom
-```
-
-This will create two rpm packages that should be installed in the gpd pocket.
-
 * Clone this repo and copy it to an external pendrive. You can use the same
 pendrive than the Fedora installation to have all included.
 
 ```
 git clone https://github.com/e-minguez/gpd-pocket-fedora.git /run/media/$USER/<pendrive>/
 ```
-
-* Copy the kernel packages from your laptop from `~/rpmbuild/RPMS/x86_64` to the pendrive.
-
 
 * Connect the pendrive in the GPD pocket once Fedora 27 has been installed and booted
 
@@ -73,12 +54,6 @@ git clone https://github.com/e-minguez/gpd-pocket-fedora.git /run/media/$USER/<p
 /run/media/$USER/<pendrive>/basic_network.sh <my_ap> <my_password>
 ```
 
-* Install the kernel using dnf:
-
-```
-sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
-```
-
 Then, run all the scripts in any order and reboot.
 
 ```
@@ -90,6 +65,7 @@ cd /run/media/$USER/<pendrive>/
 ./fix_kernel.sh
 ./grub.sh
 ./monitor.sh
+./kernel.sh
 sudo reboot
 ```
 
@@ -110,6 +86,32 @@ sudo dracut -f /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 
 Reboot again... and profit!!!
+
+## Compile the kernel manually
+
+Compile the kernel in your F27 laptop using the following instructions:
+
+```
+sudo dnf groupinstall -y "C Development Tools and Libraries"
+sudo dnf install -y zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel openssl-devel elfutils-libelf-devel
+
+mkdir ~/git/
+cd git
+git clone https://github.com/jwrdegoede/linux-sunxi.git gpd-pocket-kernel
+cd gpd-pocket-kernel
+make clean
+make -j $(getconf _NPROCESSORS_ONLN) binrpm-pkg LOCALVERSION=-gpd-custom
+```
+
+This will create two rpm packages that should be installed in the gpd pocket.
+
+* Copy the kernel packages from your laptop from `~/rpmbuild/RPMS/x86_64` to the pendrive.
+
+* Install the kernel using dnf:
+
+```
+sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
+```
 
 ## References
 * http://hansdegoede.livejournal.com/17445.html
