@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/git/gpd-pocket-kernel
+cd ${HOME}/git/gpd-pocket-kernel
 git fetch --all
 git reset --hard origin/master
 COMMITID=$(git log --format="%h" -n 1)
