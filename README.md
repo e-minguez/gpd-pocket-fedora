@@ -91,7 +91,7 @@ This will create two rpm packages that should be installed in the gpd pocket.
 sudo dnf install -y /run/media/$USER/<pendrive>/*.rpm
 ```
 
-To automate this procedure and make them available (https://packagecloud.io/eminguez/gpd-pocket-kernel)[here]
+To automate this procedure and make them available [here](https://packagecloud.io/eminguez/gpd-pocket-kernel)
 I use the `gpd_kernel.sh` script
 
 ## References
