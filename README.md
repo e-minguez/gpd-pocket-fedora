@@ -1,5 +1,7 @@
 # gpd-pocket-fedora
 
+# Disclaimer: This repository is no longer updated as I don't have a GPD Pocket anymore.
+
 ## Prerrequisites
 
 * [Unlocked BIOS](https://www.reddit.com/r/GPDPocket/comments/6q74en/unlocked_gpd_pocket_bios/)
